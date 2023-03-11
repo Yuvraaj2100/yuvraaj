@@ -1,0 +1,7 @@
+$data = "$name, $email, $msg\n";
+$file = "messages.txt";
+if (file_put_contents($file, $data, FILE_APPEND | LOCK_EX)) {
+    echo "Thank you for your message!";
+} else {
+    echo "Sorry, something went wrong. Please try again later.";
+}
